@@ -12,5 +12,6 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error'],
     'security/detect-object-injection': 'off',
-  },
+  }, #wow
 };
+
