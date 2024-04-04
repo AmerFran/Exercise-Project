@@ -42,6 +42,20 @@ async function getUser(id) {
 }
 
 /**
+ * get user detail
+ * @param {string} email - user ID
+ * @returns {Promise}
+ */
+async function getEmail(email) {
+  const User = await usersRepository.getEmail(email);
+  //email
+  if (User) {
+    return true;
+  } else {
+    return false;
+  }
+}
+/**
  * Create new user
  * @param {string} name - Name
  * @param {string} email - Email
@@ -110,6 +124,7 @@ async function deleteUser(id) {
 module.exports = {
   getUsers,
   getUser,
+  getEmail,
   createUser,
   updateUser,
   deleteUser,
