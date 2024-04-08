@@ -16,7 +16,7 @@ logger.info('Creating default users');
     });
 
     if (numUsers > 0) {
-      throw new Error(`User ${email} already exists`);
+      throw new Error(`User ${email} already taken`);
     }
 
     const hashedPassword = await hashPassword(password);
