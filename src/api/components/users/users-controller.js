@@ -157,7 +157,6 @@ async function deleteUser(request, response, next) {
     return next(error);
   }
 }
-
 module.exports = {
   getUsers,
   getUser,
